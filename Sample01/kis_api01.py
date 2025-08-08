@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
+#%%
 """
 Created on Tue Feb 15 07:56:54 2022
 """
 #kis_api module 을 찾을 수 없다는 에러가 나는 경우 sys.path에 kis_api.py 가 있는 폴더를 추가해준다.
-import kis_auth as ka
+import importlib 
+import kis_auth 
+importlib.reload(kis_auth)
 import kis_domstk as kb
 
 import pandas as pd
@@ -11,8 +14,8 @@ import pandas as pd
 import sys
 
 # 토큰 발급
-ka.auth()
-
+kis_auth.auth()
+#%%
 
 #====|  국내주식(kis_domstk) import 파일을 하신후 프로그램에서 필요한 API 호출 샘플 아래 참고하시기 바랍니다.  |=====================
 #====|  국내주식(kis_domstk) import 파일을 하신후 프로그램에서 필요한 API 호출 샘플 아래 참고하시기 바랍니다.  |=====================
